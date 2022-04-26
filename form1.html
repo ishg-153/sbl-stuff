@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  
+<body>
+    <!-- Heading -->
+    <h3> HTML input form </h3>
+  
+    <!-- HTML form  -->
+    <form method="POST">
+        <h4>Please enter your Name : </h4>
+        <input type="text" name="name"><br>
+        <h4>Please enter your Email : </h4>
+        <input type="email" name="email"><br>
+        <h4>Please enter your Contact no. : </h4>
+        <input type="number" name="contact"><br><br>
+
+  
+        <input type="submit" value="Display" name="submit">
+    </form>
+</body>
+  
+</html>
+<?php
+      
+    // When the submit button is clicked
+    if (isset($_POST['submit'])) {
+      
+        // Creating variables and 
+        // storing values in it
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $contact=$_POST['contact'];
+  
+        echo "<h1><i> Hi, $name. Your Email is $email and your phone number is $contact. </i></h1>";
+    }
+?>
