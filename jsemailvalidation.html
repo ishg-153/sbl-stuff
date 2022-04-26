@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>form validation</title>
+</head>
+
+<script>  
+function validateemail()  
+{  
+var email=document.myform.email.value;  
+var contact=document.myform.contact.value
+var atposition=email.indexOf("@");  
+var dotposition=email.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=email.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }  
+
+}  
+</script>  
+<body>  
+<form name="myform"  method="post" action="#" onsubmit="return validateemail();">  
+Email: <input type="text" name="email"><br/> 
+Phone No.: <input type="text" name="mobileno"><br/>
+Name: <input type="text" name="name"><br/> 
+  
+<input type="submit" value="register">  
+</form>  
+</html>
